@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <functional>
 
-const std::string PASSWORD_REGEX = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$";
+const std::string PASSWORD_REGEX = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=_])(?=\\S+$).{8,}$";
 
 bool PasswordUtil::isValidPassword(const std::string& password) {
     std::regex regex(PASSWORD_REGEX);
